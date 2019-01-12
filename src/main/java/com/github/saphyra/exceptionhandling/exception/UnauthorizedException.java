@@ -6,4 +6,8 @@ public class UnauthorizedException extends RestException {
     public UnauthorizedException(String logMessage) {
         super(HttpStatus.UNAUTHORIZED, logMessage);
     }
+
+    public UnauthorizedException(ErrorCode errorCode, String logMessage){
+        super(HttpStatus.UNAUTHORIZED, errorCode, logMessage);
+    }
 }
