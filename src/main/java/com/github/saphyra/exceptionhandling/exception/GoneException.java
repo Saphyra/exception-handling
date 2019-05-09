@@ -1,6 +1,6 @@
 package com.github.saphyra.exceptionhandling.exception;
 
-import com.github.saphyra.exceptionhandling.domain.ErrorCode;
+import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
 public class GoneException extends RestException {
@@ -8,7 +8,7 @@ public class GoneException extends RestException {
         super(HttpStatus.GONE, logMessage);
     }
 
-    public GoneException(ErrorCode errorCode, String logMessage){
-        super(HttpStatus.GONE, errorCode, logMessage);
+    public GoneException(ErrorMessage errorMessage, String logMessage){
+        super(HttpStatus.GONE, errorMessage, logMessage);
     }
 }

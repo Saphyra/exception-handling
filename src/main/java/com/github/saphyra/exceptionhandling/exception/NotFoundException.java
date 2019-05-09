@@ -1,6 +1,6 @@
 package com.github.saphyra.exceptionhandling.exception;
 
-import com.github.saphyra.exceptionhandling.domain.ErrorCode;
+import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
 public class NotFoundException extends RestException {
@@ -8,7 +8,7 @@ public class NotFoundException extends RestException {
         super(HttpStatus.NOT_FOUND, logMessage);
     }
 
-    public NotFoundException(ErrorCode errorCode, String logMessage){
-        super(HttpStatus.NOT_FOUND, errorCode, logMessage);
+    public NotFoundException(ErrorMessage errorMessage, String logMessage){
+        super(HttpStatus.NOT_FOUND, errorMessage, logMessage);
     }
 }

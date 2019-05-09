@@ -1,6 +1,6 @@
 package com.github.saphyra.exceptionhandling.exception;
 
-import com.github.saphyra.exceptionhandling.domain.ErrorCode;
+import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
 public class UnauthorizedException extends RestException {
@@ -8,7 +8,7 @@ public class UnauthorizedException extends RestException {
         super(HttpStatus.UNAUTHORIZED, logMessage);
     }
 
-    public UnauthorizedException(ErrorCode errorCode, String logMessage){
-        super(HttpStatus.UNAUTHORIZED, errorCode, logMessage);
+    public UnauthorizedException(ErrorMessage errorMessage, String logMessage){
+        super(HttpStatus.UNAUTHORIZED, errorMessage, logMessage);
     }
 }

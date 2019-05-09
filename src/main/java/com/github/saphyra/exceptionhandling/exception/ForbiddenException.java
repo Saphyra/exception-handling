@@ -1,6 +1,6 @@
 package com.github.saphyra.exceptionhandling.exception;
 
-import com.github.saphyra.exceptionhandling.domain.ErrorCode;
+import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
 public class ForbiddenException extends RestException {
@@ -8,7 +8,7 @@ public class ForbiddenException extends RestException {
         super(HttpStatus.FORBIDDEN, logMessage);
     }
 
-    public ForbiddenException(ErrorCode errorCode, String logMessage){
-        super(HttpStatus.FORBIDDEN, errorCode, logMessage);
+    public ForbiddenException(ErrorMessage errorMessage, String logMessage){
+        super(HttpStatus.FORBIDDEN, errorMessage, logMessage);
     }
 }
