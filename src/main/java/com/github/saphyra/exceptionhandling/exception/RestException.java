@@ -1,8 +1,9 @@
 package com.github.saphyra.exceptionhandling.exception;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 import org.springframework.http.HttpStatus;
+
+import com.github.saphyra.exceptionhandling.domain.ErrorCode;
+import lombok.Getter;
 
 public class RestException extends RuntimeException {
     public static final ErrorCode DEFAULT_ERROR_CODE = new ErrorCode("", "");
@@ -23,20 +24,5 @@ public class RestException extends RuntimeException {
         super(logMessage);
         this.responseStatus = responseStatus;
         this.errorCode = errorCode;
-    }
-
-    @AllArgsConstructor
-    public static class ErrorCode {
-        private final String errorCode;
-        private final String errorMessage;
-
-        public ErrorCode(String errorCode){
-            this(errorCode, "");
-        }
-
-        @Override
-        public String toString() {
-            return errorCode + " - " + errorMessage;
-        }
     }
 }
