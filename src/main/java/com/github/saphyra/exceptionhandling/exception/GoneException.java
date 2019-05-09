@@ -1,5 +1,6 @@
 package com.github.saphyra.exceptionhandling.exception;
 
+import com.github.saphyra.exceptionhandling.domain.ErrorCode;
 import org.springframework.http.HttpStatus;
 
 public class GoneException extends RestException {
