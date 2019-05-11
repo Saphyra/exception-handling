@@ -4,11 +4,13 @@ import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
 public class UnauthorizedException extends RestException {
+    private static final HttpStatus STATUS = HttpStatus.UNAUTHORIZED;
+
     public UnauthorizedException(String logMessage) {
-        super(HttpStatus.UNAUTHORIZED, logMessage);
+        super(STATUS, logMessage);
     }
 
     public UnauthorizedException(ErrorMessage errorMessage, String logMessage){
-        super(HttpStatus.UNAUTHORIZED, errorMessage, logMessage);
+        super(STATUS, errorMessage, logMessage);
     }
 }

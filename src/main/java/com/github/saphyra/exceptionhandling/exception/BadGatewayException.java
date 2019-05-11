@@ -3,14 +3,14 @@ package com.github.saphyra.exceptionhandling.exception;
 import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
-public class ConflictException extends RestException {
-    private static final HttpStatus STATUS = HttpStatus.CONFLICT;
+public class BadGatewayException extends RestException {
+    private static final HttpStatus STATUS = HttpStatus.BAD_GATEWAY;
 
-    public ConflictException(String logMessage) {
+    public BadGatewayException(String logMessage) {
         super(STATUS, logMessage);
     }
 
-    public ConflictException(ErrorMessage errorMessage, String logMessage) {
+    public BadGatewayException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
 }

@@ -3,14 +3,14 @@ package com.github.saphyra.exceptionhandling.exception;
 import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
-public class ConflictException extends RestException {
-    private static final HttpStatus STATUS = HttpStatus.CONFLICT;
+public class IAmATeapotException extends RestException {
+    private static final HttpStatus STATUS = HttpStatus.I_AM_A_TEAPOT;
 
-    public ConflictException(String logMessage) {
+    public IAmATeapotException(String logMessage) {
         super(STATUS, logMessage);
     }
 
-    public ConflictException(ErrorMessage errorMessage, String logMessage) {
+    public IAmATeapotException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
 }

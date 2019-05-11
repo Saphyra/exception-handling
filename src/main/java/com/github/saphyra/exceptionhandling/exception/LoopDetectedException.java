@@ -3,14 +3,14 @@ package com.github.saphyra.exceptionhandling.exception;
 import com.github.saphyra.exceptionhandling.domain.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
-public class ConflictException extends RestException {
-    private static final HttpStatus STATUS = HttpStatus.CONFLICT;
+public class LoopDetectedException extends RestException {
+    private static final HttpStatus STATUS = HttpStatus.LOOP_DETECTED;
 
-    public ConflictException(String logMessage) {
+    public LoopDetectedException(String logMessage) {
         super(STATUS, logMessage);
     }
 
-    public ConflictException(ErrorMessage errorMessage, String logMessage) {
+    public LoopDetectedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
 }
