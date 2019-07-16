@@ -13,4 +13,8 @@ public class FailedDependencyException extends RestException {
     public FailedDependencyException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public FailedDependencyException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

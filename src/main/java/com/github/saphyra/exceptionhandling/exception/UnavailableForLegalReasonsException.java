@@ -13,4 +13,8 @@ public class UnavailableForLegalReasonsException extends RestException {
     public UnavailableForLegalReasonsException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public UnavailableForLegalReasonsException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

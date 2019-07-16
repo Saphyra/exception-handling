@@ -13,4 +13,8 @@ public class RequestHeaderFieldsTooLargeException extends RestException {
     public RequestHeaderFieldsTooLargeException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public RequestHeaderFieldsTooLargeException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

@@ -13,4 +13,8 @@ public class InternalServerErrorException extends RestException {
     public InternalServerErrorException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public InternalServerErrorException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

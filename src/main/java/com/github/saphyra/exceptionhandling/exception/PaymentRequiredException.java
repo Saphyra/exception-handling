@@ -13,4 +13,8 @@ public class PaymentRequiredException extends RestException {
     public PaymentRequiredException(ErrorMessage errorMessage, String logMessage) {
         super(STATUS, errorMessage, logMessage);
     }
+
+    public PaymentRequiredException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

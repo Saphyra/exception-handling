@@ -13,4 +13,8 @@ public class UnauthorizedException extends RestException {
     public UnauthorizedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public UnauthorizedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

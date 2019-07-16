@@ -10,7 +10,11 @@ public class RequestTimeoutException extends RestException {
         super(STATUS, logMessage);
     }
 
-    public RequestTimeoutException(ErrorMessage errorMessage, String logMessage){
+    public RequestTimeoutException(ErrorMessage errorMessage, String logMessage) {
         super(STATUS, errorMessage, logMessage);
+    }
+
+    public RequestTimeoutException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
     }
 }

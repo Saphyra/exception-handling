@@ -13,4 +13,8 @@ public class ServiceUnavailableException extends RestException {
     public ServiceUnavailableException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public ServiceUnavailableException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

@@ -13,4 +13,8 @@ public class ForbiddenException extends RestException {
     public ForbiddenException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public ForbiddenException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

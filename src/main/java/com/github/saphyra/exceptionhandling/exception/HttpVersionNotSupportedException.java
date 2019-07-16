@@ -13,4 +13,8 @@ public class HttpVersionNotSupportedException extends RestException {
     public HttpVersionNotSupportedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public HttpVersionNotSupportedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

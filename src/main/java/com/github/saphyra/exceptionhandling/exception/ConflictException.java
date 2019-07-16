@@ -13,4 +13,8 @@ public class ConflictException extends RestException {
     public ConflictException(ErrorMessage errorMessage, String logMessage) {
         super(STATUS, errorMessage, logMessage);
     }
+
+    public ConflictException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

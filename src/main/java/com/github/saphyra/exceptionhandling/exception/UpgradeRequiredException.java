@@ -10,7 +10,11 @@ public class UpgradeRequiredException extends RestException {
         super(STATUS, logMessage);
     }
 
-    public UpgradeRequiredException(ErrorMessage errorMessage, String logMessage){
+    public UpgradeRequiredException(ErrorMessage errorMessage, String logMessage) {
         super(STATUS, errorMessage, logMessage);
+    }
+
+    public UpgradeRequiredException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
     }
 }

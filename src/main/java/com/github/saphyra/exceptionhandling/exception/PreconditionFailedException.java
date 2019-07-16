@@ -13,4 +13,8 @@ public class PreconditionFailedException extends RestException {
     public PreconditionFailedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public PreconditionFailedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

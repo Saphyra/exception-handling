@@ -13,4 +13,8 @@ public class NotExtendedException extends RestException {
     public NotExtendedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public NotExtendedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

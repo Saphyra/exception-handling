@@ -13,4 +13,8 @@ public class BadGatewayException extends RestException {
     public BadGatewayException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public BadGatewayException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

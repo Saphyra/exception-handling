@@ -13,4 +13,8 @@ public class BadRequestException extends RestException {
     public BadRequestException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public BadRequestException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

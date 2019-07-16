@@ -13,4 +13,8 @@ public class LockedException extends RestException {
     public LockedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public LockedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

@@ -10,7 +10,11 @@ public class NotImplementedException extends RestException {
         super(STATUS, logMessage);
     }
 
-    public NotImplementedException(ErrorMessage errorMessage, String logMessage){
+    public NotImplementedException(ErrorMessage errorMessage, String logMessage) {
         super(STATUS, errorMessage, logMessage);
+    }
+
+    public NotImplementedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
     }
 }

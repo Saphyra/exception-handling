@@ -13,4 +13,8 @@ public class LoopDetectedException extends RestException {
     public LoopDetectedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public LoopDetectedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

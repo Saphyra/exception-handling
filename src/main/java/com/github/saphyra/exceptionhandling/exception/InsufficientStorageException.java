@@ -13,4 +13,8 @@ public class InsufficientStorageException extends RestException {
     public InsufficientStorageException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public InsufficientStorageException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

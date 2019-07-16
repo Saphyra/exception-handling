@@ -13,4 +13,8 @@ public class GatewayTimeoutException extends RestException {
     public GatewayTimeoutException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public GatewayTimeoutException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

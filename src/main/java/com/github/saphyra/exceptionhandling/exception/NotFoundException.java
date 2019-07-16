@@ -13,4 +13,8 @@ public class NotFoundException extends RestException {
     public NotFoundException(ErrorMessage errorMessage, String logMessage) {
         super(STATUS, errorMessage, logMessage);
     }
+
+    public NotFoundException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

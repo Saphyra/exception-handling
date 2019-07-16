@@ -13,4 +13,8 @@ public class GoneException extends RestException {
     public GoneException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public GoneException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

@@ -13,4 +13,8 @@ public class NetworkAuthenticationRequiredException extends RestException {
     public NetworkAuthenticationRequiredException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public NetworkAuthenticationRequiredException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

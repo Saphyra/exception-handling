@@ -13,4 +13,8 @@ public class ProxyAuthenticationRequiredException extends RestException {
     public ProxyAuthenticationRequiredException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public ProxyAuthenticationRequiredException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

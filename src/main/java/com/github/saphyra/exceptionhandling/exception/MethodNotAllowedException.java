@@ -13,4 +13,8 @@ public class MethodNotAllowedException extends RestException {
     public MethodNotAllowedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public MethodNotAllowedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

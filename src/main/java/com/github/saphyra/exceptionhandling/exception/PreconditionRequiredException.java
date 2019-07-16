@@ -13,4 +13,8 @@ public class PreconditionRequiredException extends RestException {
     public PreconditionRequiredException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public PreconditionRequiredException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

@@ -13,4 +13,8 @@ public class ExpectationFailedException extends RestException {
     public ExpectationFailedException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public ExpectationFailedException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

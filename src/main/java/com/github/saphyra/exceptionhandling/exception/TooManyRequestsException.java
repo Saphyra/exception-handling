@@ -13,4 +13,8 @@ public class TooManyRequestsException extends RestException {
     public TooManyRequestsException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public TooManyRequestsException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

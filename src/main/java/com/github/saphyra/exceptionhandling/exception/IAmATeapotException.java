@@ -13,4 +13,8 @@ public class IAmATeapotException extends RestException {
     public IAmATeapotException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public IAmATeapotException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

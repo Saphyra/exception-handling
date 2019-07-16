@@ -10,7 +10,11 @@ public class PayloadTooLargeException extends RestException {
         super(STATUS, logMessage);
     }
 
-    public PayloadTooLargeException(ErrorMessage errorMessage, String logMessage){
+    public PayloadTooLargeException(ErrorMessage errorMessage, String logMessage) {
         super(STATUS, errorMessage, logMessage);
+    }
+
+    public PayloadTooLargeException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
     }
 }

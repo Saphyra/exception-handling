@@ -13,4 +13,8 @@ public class RequestRangeNotSatisfiableException extends RestException {
     public RequestRangeNotSatisfiableException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public RequestRangeNotSatisfiableException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }

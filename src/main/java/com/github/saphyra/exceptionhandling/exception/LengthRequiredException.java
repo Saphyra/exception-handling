@@ -13,4 +13,8 @@ public class LengthRequiredException extends RestException {
     public LengthRequiredException(ErrorMessage errorMessage, String logMessage){
         super(STATUS, errorMessage, logMessage);
     }
+
+    public LengthRequiredException(String errorCode, String logMessage) {
+        super(STATUS, errorCode, logMessage);
+    }
 }
