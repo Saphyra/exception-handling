@@ -12,7 +12,7 @@
 
     <groupId>com.github.saphyra</groupId>
     <artifactId>${artifactId}</artifactId>
-    <version>1.3.2</version>
+    <version>1.3.3</version>
 
     <name>${projectName}</name>
     <description>${projectDescription}</description>
@@ -26,7 +26,6 @@
             <version>1.7.25</version>
         </dependency>
 
-
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -39,6 +38,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>5.1.3.RELEASE</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>8.5.31</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->

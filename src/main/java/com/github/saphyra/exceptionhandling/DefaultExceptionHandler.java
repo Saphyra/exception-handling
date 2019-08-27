@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 @ControllerAdvice
@@ -20,13 +21,13 @@ public class DefaultExceptionHandler {
     private final Optional<ErrorTranslationAdapter> errorTranslationAdapter;
 
     @ExceptionHandler(RestException.class)
-    public ResponseEntity<ErrorResponse> handleRestException(RestException ex) {
+    public ResponseEntity<ErrorResponse> handleRestException(HttpServletRequest request, RestException ex) {
         log.warn("{} - {}", ex.getMessage(), ex.getErrorMessage(), ex);
         ErrorMessage errorMessage = ex.getErrorMessage();
 
         String localizedMessage = null;
         if (errorTranslationAdapter.isPresent()) {
-            localizedMessage = errorTranslationAdapter.get().translateMessage(errorMessage.getErrorCode(), errorMessage.getParams());
+            localizedMessage = errorTranslationAdapter.get().translateMessage(request, errorMessage.getErrorCode(), errorMessage.getParams());
         }
 
         ErrorResponse errorResponse = ErrorResponse.builder()
