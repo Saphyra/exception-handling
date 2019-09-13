@@ -7,5 +7,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackageClasses = DefaultExceptionHandler.class)
-public class BeanConfig {
+public class ExceptionHandlerBeanConfig {
 }
